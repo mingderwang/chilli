@@ -4,6 +4,7 @@ Dockerize go app
 # build
 docker build -t mingderwang/chilli .
 docker run -d -p 8080:8080 -v $(pwd):/gopath/src/onion mingderwang/chilli 
+docker run -d -p 8080:8080 asia.gcr.io/winter-wonder-647/hello-onion
 
 # test
 
