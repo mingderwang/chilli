@@ -1,6 +1,6 @@
 {
-        "domainName": "com.example.project", 
-            "typeName": "slack",
-                "jsonSchema": "{\"message\": \"Hello World\", \"size\": 32, \"number\": 1.234}"
+   "name": "Ming", 
+   "age": 32,
+   "address": "Taipei, Taiwan}"
 }
 

@@ -1,13 +1,12 @@
-
 //go:generate ginger $GOFILE
 package main
 
 //@ginger
-type TaipeiCity struct {
+type City struct {
 	Ginger_Created int32 `json:"ginger_created"`
-	Ginger_Id int32 `json:"ginger_id" gorm:"primary_key"`
+	Ginger_Id      int32 `json:"ginger_id" gorm:"primary_key"`
 
-	Message string `json:"message"`
-	Size float64 `json:"size"`
-	Number float64 `json:"number"`
+	Name    string `json:"name"`
+	Age     int    `json:"age"`
+	Address string `json:"address"`
 }

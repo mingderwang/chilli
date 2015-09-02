@@ -1,22 +1,30 @@
 # chilli
 Dockerize go app
 
+# pre-install
+docker
+## don't use "go generate", you only need onion.go file.
+## you need to pre-build image: asia.gcr.io/.../base-onion 
+docker build -f example/Dockerfile.asia.gcr.io -t asia.gcr.io/mitac-cust-gcp-1/base-onion .
+
 # build
-docker build -t mingderwang/chilli .
-docker run -d -p 8080:8080 -v $(pwd):/gopath/src/onion mingderwang/chilli 
-docker run -d -p 8080:8080 asia.gcr.io/winter-wonder-647/hello-onion
+docker build -t ming/chilli .
+docker run -d -p 8080:8080 --name demo ming/chilli
 
 # test
+source code under example/
 
+test.sh
 ```
-curl -X POST -d @test.json --header "content-type: application/json" http://localhost:8080/onion
+curl -X POST -d @test.json --header "content-type: application/json" http://localhost:8080/city
 ```
 
 test.json
 ```
 {
-    "domainName": "com.example.project", 
-    "typeName": "slack",
-    "jsonSchema": "{\"message\": \"Hello World\", \"size\": 32, \"number\": 1.234}"
+   "name": "Ming", 
+   "age": 32,
+   "address": "Taipei, Taiwan}"
 }
+
 ```
