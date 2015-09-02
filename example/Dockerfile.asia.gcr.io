@@ -1,6 +1,7 @@
 FROM golang:1.5
 
 RUN mkdir -p /go/src/github.com/mingderwang/chilli
+RUN go get github.com/mingderwang/pepper
 RUN go get github.com/mingderwang/ginger \
   && cd /go/src/github.com/mingderwang/chilli \
   && wget https://s3-ap-northeast-1.amazonaws.com/log4-base-onion/supermarket/example_onion.go \
