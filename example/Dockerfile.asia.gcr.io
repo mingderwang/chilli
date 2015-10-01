@@ -8,8 +8,12 @@ RUN go get github.com/mingderwang/ginger \
   && go generate \
   && go get ./... 
 
+RUN apt-get update
+RUN apt-get install -y sqlite3 libsqlite3-dev
+RUN mkdir -p /data
 ONBUILD RUN mkdir -p /go/src/github.com/mingderwang/onion
 ONBUILD WORKDIR /go/src/github.com/mingderwang/onion
 ONBUILD COPY . /go/src/github.com/mingderwang/onion
-ONBUILD RUN go install \
+ONBUILD RUN go generate \
+  && go install \
   && /go/bin/onion migratedb
