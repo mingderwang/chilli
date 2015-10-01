@@ -11,6 +11,5 @@ RUN go get github.com/mingderwang/ginger \
 ONBUILD RUN mkdir -p /go/src/github.com/mingderwang/onion
 ONBUILD WORKDIR /go/src/github.com/mingderwang/onion
 ONBUILD COPY . /go/src/github.com/mingderwang/onion
-ONBUILD RUN go generate \
-  && go install \
+ONBUILD RUN go install \
   && /go/bin/onion migratedb
