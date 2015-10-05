@@ -1,5 +1,4 @@
 workspace/
-Dockerfile
 Makefile
 *_resource.go
 main.go
