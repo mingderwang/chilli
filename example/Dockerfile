@@ -4,7 +4,7 @@ RUN mkdir -p /go/src/github.com/mingderwang/chilli
 RUN go get github.com/mingderwang/pepper
 RUN go get github.com/mingderwang/ginger \
   && cd /go/src/github.com/mingderwang/chilli \
-  && wget https://s3-ap-northeast-1.amazonaws.com/log4-base-onion/supermarket/example_onion.go \
+  && wget https://storage.googleapis.com/onion-ming/example_onion.go
   && go generate \
   && go get ./... 
 
