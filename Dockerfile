@@ -1,3 +1,4 @@
 FROM asia.gcr.io/winter-wonder-647/base-onion:latest 
+MAINTAINER Ming-der Wang <ming@log4analytics.com>
 CMD ["/go/bin/onion","serve"]
 EXPOSE 8080

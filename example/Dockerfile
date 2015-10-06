@@ -8,8 +8,6 @@ RUN go get github.com/mingderwang/ginger \
   && go generate \
   && go get ./... 
 
-RUN apt-get update
-RUN apt-get install -y sqlite3 libsqlite3-dev
 ONBUILD RUN mkdir -p /go/src/github.com/mingderwang/onion
 ONBUILD RUN mkdir -p /data
 ONBUILD RUN chmod 777 /data 
