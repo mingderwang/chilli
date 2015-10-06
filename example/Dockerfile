@@ -1,4 +1,4 @@
-FROM golang:1.5
+FROM golang:1.5.1
 
 RUN mkdir -p /go/src/github.com/mingderwang/chilli
 RUN go get github.com/mingderwang/pepper
@@ -15,6 +15,5 @@ ONBUILD RUN mkdir -p /data
 ONBUILD RUN chmod 777 /data 
 ONBUILD WORKDIR /go/src/github.com/mingderwang/onion
 ONBUILD COPY . /go/src/github.com/mingderwang/onion
-ONBUILD RUN go generate 
 ONBUILD RUN go install 
 ONBUILD RUN onion migratedb
