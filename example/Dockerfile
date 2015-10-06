@@ -10,8 +10,7 @@ RUN go get github.com/mingderwang/ginger \
 
 ONBUILD RUN mkdir -p /go/src/github.com/mingderwang/onion
 ONBUILD RUN mkdir -p /data
-ONBUILD RUN chmod 777 /data 
+ONBUILD RUN chmod 777 /data
 ONBUILD WORKDIR /go/src/github.com/mingderwang/onion
 ONBUILD COPY . /go/src/github.com/mingderwang/onion
 ONBUILD RUN go install 
-ONBUILD RUN onion migratedb
