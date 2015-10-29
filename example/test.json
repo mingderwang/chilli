@@ -1,6 +1,1 @@
-{
-   "name": "Ming", 
-   "age": 32,
-   "address": "Taipei, Taiwan}"
-}
-
+{ "id": 1, "name": "Yenikapı", "slug": "yenikapi", "terminal_code": "YKP" }
