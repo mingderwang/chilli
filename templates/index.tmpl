@@ -1,0 +1,202 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "City API",
+        "description": "Auto generated API from JSON",
+        "version": "1.0.0"
+    },
+    "host": "api.log4security.com:30194",
+    "chemes": [
+        "http"
+    ],
+    "basePath": "/",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/v2/swagger.json": {
+            "get": {
+                "summary": "Get swagger json file",
+                "description": "",
+                "responses": {
+                    "200": null,
+                    "description": "A json file for swagger api document"
+                }
+            }
+        },
+        "/city": {
+            "get": {
+                "summary": "Get all cities",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "An array of city",
+                        "schema": {
+                            "type": "array",
+                            "$ref": "#/definitions/City"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "body",
+                        "description": "The city JSON you want to post",
+                        "schema": {
+                            "$ref": "#/definitions/City"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Make a new city",
+                        "schema": {
+                            "$ref": "#/definitions/CityRecord"
+                        }
+                    }
+                }
+            }
+        },
+        "/city/{id}": {
+            "get": {
+                "summary": "Get city from Id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the city",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get the city with Id",
+                        "schema": {
+                            "$ref": "#/definitions/CityRecord"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove a city",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the city",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "deleted"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a city",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the city",
+                        "required": true
+                    },
+                    {
+                        "name": "city",
+                        "in": "body",
+                        "description": "The city JSON you want to post",
+                        "schema": {
+                            "$ref": "#/definitions/City"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated city",
+                        "schema": {
+                            "$ref": "#/definitions/CityRecord"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update a city",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the city",
+                        "required": true
+                    },
+                    {
+                        "name": "city",
+                        "in": "body",
+                        "description": "The city JSON you want to post",
+                        "schema": {
+                            "$ref": "#/definitions/City"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated city",
+                        "schema": {
+                            "$ref": "#/definitions/CityRecord"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "City": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer",
+                    "format": "int"
+                },
+                "address": {
+                    "type": "string"
+                }
+            }
+        },
+        "CityRecord": {
+            "type": "object",
+            "properties": {
+                "ginger_created": {
+                    "type": "string"
+                },
+                "ginger_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer",
+                    "format": "int"
+                },
+                "address": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
