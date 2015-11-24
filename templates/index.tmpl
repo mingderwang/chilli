@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "City API",
+        "title": "city API",
         "description": "Auto generated API from JSON",
         "version": "1.0.0"
     },
@@ -33,7 +33,7 @@
                         "description": "An array of city",
                         "schema": {
                             "type": "array",
-                            "$ref": "#/definitions/City"
+                            "$ref": "#/definitions/city"
                         }
                     }
                 }
@@ -45,7 +45,7 @@
                         "in": "body",
                         "description": "The city JSON you want to post",
                         "schema": {
-                            "$ref": "#/definitions/City"
+                            "$ref": "#/definitions/city"
                         },
                         "required": true
                     }
@@ -54,7 +54,7 @@
                     "200": {
                         "description": "Make a new city",
                         "schema": {
-                            "$ref": "#/definitions/CityRecord"
+                            "$ref": "#/definitions/cityRecord"
                         }
                     }
                 }
@@ -76,7 +76,7 @@
                     "200": {
                         "description": "Get the city with Id",
                         "schema": {
-                            "$ref": "#/definitions/CityRecord"
+                            "$ref": "#/definitions/cityRecord"
                         }
                     }
                 }
@@ -115,7 +115,7 @@
                         "in": "body",
                         "description": "The city JSON you want to post",
                         "schema": {
-                            "$ref": "#/definitions/City"
+                            "$ref": "#/definitions/city"
                         },
                         "required": true
                     }
@@ -124,7 +124,7 @@
                     "200": {
                         "description": "Updated city",
                         "schema": {
-                            "$ref": "#/definitions/CityRecord"
+                            "$ref": "#/definitions/cityRecord"
                         }
                     }
                 }
@@ -145,7 +145,7 @@
                         "in": "body",
                         "description": "The city JSON you want to post",
                         "schema": {
-                            "$ref": "#/definitions/City"
+                            "$ref": "#/definitions/city"
                         },
                         "required": true
                     }
@@ -154,7 +154,7 @@
                     "200": {
                         "description": "Updated city",
                         "schema": {
-                            "$ref": "#/definitions/CityRecord"
+                            "$ref": "#/definitions/cityRecord"
                         }
                     }
                 }
@@ -162,7 +162,7 @@
         }
     },
     "definitions": {
-        "City": {
+        "city": {
             "type": "object",
             "properties": {
                 "name": {
@@ -177,7 +177,7 @@
                 }
             }
         },
-        "CityRecord": {
+        "cityRecord": {
             "type": "object",
             "properties": {
                 "ginger_created": {

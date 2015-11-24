@@ -2,7 +2,7 @@
 example/Dockerfile is the base images for all onion images. For changing base image on google registery.
 You need to stop monit and onion server on Ming1 (main server) and remove base image.
 
-Without remove base image, asia.gcr.io/winter-wonder-647/base-onion:latest
+Without remove base image, asia.gcr.io/gogetdb/base-onion:latest
 you can't build and push to google correctly.
 Because all new kube/{id}/build are regenerate (go generate) code on Ming1. Without repload base image, all new code are not gerated.
 

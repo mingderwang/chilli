@@ -1,3 +1,3 @@
 #!/bin/bash
 set -o xtrace
-gcloud docker push asia.gcr.io/winter-wonder-647/base-onion:latest
+gcloud docker push asia.gcr.io/gogetdb/base-onion:latest
